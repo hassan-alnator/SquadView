@@ -1,0 +1,196 @@
+.App {
+  text-align: center;
+  display: flex;
+  padding: 10px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.card-image {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.item-container {
+  width: 40%;
+}
+
+.card-container {
+  margin-top: 80px;
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+.dnd {
+  display: flex;
+}
+.alliances {
+  display: flex;
+}
+.alliance {
+  border: none;
+
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  margin-left: 10px;
+}
+.add-team-button {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.team-name {
+  border: 1px solid rgb(192, 136, 136);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.search-bar {
+  border: 1px solid rgb(192, 136, 136);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.gridList {
+  flex-wrap: "nowrap";
+}
+.root {
+  display: "flex";
+  flex-wrap: "wrap";
+  justify-content: "space-around";
+  overflow: "hidden";
+  flex-direction: row;
+}
+.employees {
+  display: "flex";
+  flex-direction: row;
+}
+.slick-arrow {
+  /* background-color: red; */
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+}
+.slick-arrow:hover,
+.slick-arrow:active,
+.slick-arrow:focus {
+  /* background-color: red !important; */
+  color: #000;
+}
+.container {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.data-grid-container {
+  background-color: rgba(241, 191, 191, 0.2);
+  border-radius: 60px;
+  border: none;
+}
+.button {
+  cursor: pointer;
+  background-color: #aadddb;
+  border: none;
+  padding: 3rem 6rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.button--slide {
+  font-family: "Dela Gothic One", cursive;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border: 1px solid black;
+  overflow: hidden;
+  color: white;
+}
+
+.button--slide span {
+  display: block;
+  position: relative;
+}
+
+.button--slide > span {
+  overflow: hidden;
+}
+
+.button--slide > span > span {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.button--slide:hover > span > span {
+  animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+@keyframes MoveUpInitial {
+  to {
+    transform: translate3d(0, -105%, 0);
+  }
+}
+
+@keyframes MoveUpEnd {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.button--slide::before {
+  content: "";
+  background-color: rgb(15, 191, 204);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transform-origin: 100% 50%;
+}
+
+.button--slide:hover::before {
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+}
